@@ -1,4 +1,4 @@
-
+print("Loaded Aimware Simple Night mode Lua by Starlordaiden")
 local reference = gui.Reference("VISUALS", "WORLD", "Extra");
 local exposure = gui.Slider(reference, "nex_bloom_exposure", "Night Mode", 100, 1, 100);
 callbacks.Register("Draw", "Night Mode", function()
