@@ -1,3 +1,4 @@
+print("Loaded Aimware FullBright Lua by Starlordaiden")
 local ref = gui.Reference( "VISUALS", "WORLD", "Extra" );
 local lua_slider = gui.Slider( ref, "lua_healthshot_slider", "Healthshot on Kill", 1, 1, 10 );
 function HealthshotEffect( Event, Entity )
