@@ -1,3 +1,4 @@
+print ("Loaded Rainbow Helper by starlordaiden!")
 RAINBOW_SPEED = 1;
 -- <1 = faster, >1 = slower
 --SLIDER NEED 
