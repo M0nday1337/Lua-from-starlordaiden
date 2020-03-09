@@ -3,7 +3,7 @@ RAINBOW_SPEED = 1;
 -- <1 = faster, >1 = slower
 --SLIDER NEED 
 local RAINBOW_REF = gui.Reference("Visuals", "Other")
-local RAINBOW_GROUPBOX = gui.Groupbox(RAINBOW_REF, "Rainbow Helper", 15, 395, 297)
+local RAINBOW_GROUPBOX = gui.Groupbox(RAINBOW_REF, "Rainbow Helper", 15, 513, 297)
 -- RAINBOW_GROUPBOX:SetDescription("If you want make faster or slower, change Rainbow_Speed.")
 --Friendly
 local RAINBOWFR_GROUPBOX = gui.Groupbox(RAINBOW_GROUPBOX, "Rainbow Friendly Chams", 0, 0, 250)
@@ -47,6 +47,12 @@ local RAINBOWWEBO_CHECKBOX = gui.Checkbox(RAINBOWFRBO_GROUPBOX,"RainbowWeBo", "W
 --Crosshair
 local RAINBOWCR_GROUPBOX = gui.Groupbox(RAINBOW_GROUPBOX, "Rainbow Extra", 0, 1350, 250)
 local RAINBOWCR_CHECKBOX = gui.Checkbox(RAINBOWCR_GROUPBOX,"RainbowCr", "Crosshair", false);
+--Skeleton 
+local RAINBOWSK_GROUPBOX = gui.Groupbox(RAINBOW_GROUPBOX, "Skeleton ", 0, 1450, 250)
+local RAINBOWFRSK_CHECKBOX = gui.Checkbox(RAINBOWSK_GROUPBOX,"RainbowFrSk", "Friendly", false);
+local RAINBOWENSK_CHECKBOX = gui.Checkbox(RAINBOWSK_GROUPBOX,"RainbowFrEn", "Enemy", false);
+
+
 function rainbowesp()
     RED = math.sin((globals.RealTime() / RAINBOW_SPEED) * 4) * 127 + 128;
     GREEN = math.sin((globals.RealTime() / RAINBOW_SPEED) * 4 + 2) * 127 + 128;
@@ -131,6 +137,13 @@ function rainbowesp()
     --Extra
     if RAINBOWCR_CHECKBOX:GetValue() then
     gui.SetValue( "esp.other.crosshair.clr", math.floor(RED), math.floor(GREEN), math.floor(BLUE), 255)
+    end
+    --Skeleton
+    if RAINBOWFRSK_CHECKBOX:GetValue() then
+        gui.SetValue( "esp.overlay.friendly.skeleton.clr", math.floor(RED), math.floor(GREEN), math.floor(BLUE), 255)
+    end
+    if RAINBOWENSK_CHECKBOX:GetValue() then
+        gui.SetValue( "esp.overlay.enemy.skeleton.clr", math.floor(RED), math.floor(GREEN), math.floor(BLUE), 255)
     end
     --Theme
     --Will Be Added Soon
