@@ -1,0 +1,13 @@
+𝐆𝐞𝐧𝐞𝐫𝐚𝐥
+○ Added autoupdater.
+○ Added changelog.
+○ Added rainbow chams for nades.
+○ Added rainbow chams for attachments.
+○ Added rainbow chams for viewmodels.
+○ Added rainbow chams for ragdolls.
+○ Added rainbow glow.
+○ Added rainbow for bullet tracers.
+
+𝐒𝐨𝐨𝐧
+○ New menu.
+○ More improvements.
